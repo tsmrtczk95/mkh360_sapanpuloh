@@ -22,14 +22,13 @@
       <a-assets>
         <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
         <!-- Images Custom. -->
-        <img id="img-enter" src="asset_360/kaul_entrance.jpeg">
-        <img id="img-stage" src="asset_360/kaul_stage.jpeg">
-        <img id="img-signage" src="asset_360/kaul_signage.jpeg">
-        <img id="img-tibau" src="asset_360/kaul_tibau.jpeg">
+        <img id="ext-img" src="asset/sp_exterior.jpeg">
+        <img id="int-img" src="asset/sp_interior.jpeg">
+        <img id="main-img" src="asset/sp_mainroom.jpeg">
         <!-- Thumbnails -->
-        <img id="tibau-thumb" src="asset_360/thumbnail_tibau.jpeg">
-        <img id="enter-thumb" src="asset_360/thumbnail_entrance.jpeg">
-        <img id="stage-thumb" src="asset_360/thumbnail_stage.jpeg">
+        <img id="ext-thumb" src="asset/thumb_exterior.jpeg">
+        <img id="int-thumb" src="asset/thumb_interior.jpeg">
+        <img id="main-thumb" src="asset/thumb_mainroom.jpeg">
 
         <script id="link" type="text/html">
           <a-entity class="link"
@@ -43,15 +42,15 @@
         </script>
       </a-assets>
       <!-- 360-degree image. -->
-      <a-sky id="image-360" src="#img-enter" rotation="0 -55 0"
+      <a-sky id="image-360" src="#ext-img" rotation="0 0 0"
         animation__fade="property: component.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
         animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
         </a-sky>
       <!-- Pass image sources to the template. -->
       <a-entity id="links" layout="type: line; margin: 1.5" position="-1.5 0.5 -4" border="2px">
-        <a-entity template="src: #link" data-src="#img-enter" data-thumb="#enter-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#img-tibau" data-thumb="#tibau-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#img-stage" data-thumb="#stage-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#ext-img" data-thumb="#ext-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#int-img" data-thumb="#int-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#main-img" data-thumb="#main-thumb"></a-entity>
       </a-entity>
       <!-- Camera + Cursor. -->
       <a-camera>
