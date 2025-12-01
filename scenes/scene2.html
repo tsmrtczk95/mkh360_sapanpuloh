@@ -36,10 +36,15 @@
         animation__hover="property: scale; startEvents: mouseenter; to: 1.2 1.2 1.2; dur: 200"
         animation__leave="property: scale; startEvents: mouseleave; to: 1 1 1; dur: 200">
       </a-sphere>
+<!-- ANNOTATIONS. -->
+      <a-sphere position="3 4 3" radius="0.05" color="#2ba4e0"
+        portal-label="text: Rattan Basket; offset: -0.8 -0.1 0; textScale: 1.2"
+        animation__hover="property: scale; startEvents: mouseenter; to: 1.4 1.4 1.4; dur: 200"
+        animation__leave="property: scale; startEvents: mouseleave; to: 1 1 1; dur: 200">
+      </a-sphere>
 <!-- CAMERA + CURSOR. -->
       <a-camera wasd-controls-enabled="false" cursor="rayOrigin: mouse">
-        <a-cursor
-          id="cursor"
+        <a-cursor id="cursor"
           animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
           animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
           animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing"></a-cursor>
