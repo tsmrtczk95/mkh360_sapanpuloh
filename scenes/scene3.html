@@ -14,6 +14,9 @@
       <a-assets>
 <!-- AUDIO. -->
         <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+        <audio id=audio_attire src="../audio/sp_mr_weddingattire.mp3"></audio>
+        <audio id=audio_dais src="../audio/sp_mr_dais.mp3"></audio>
+        <audio id=audio_terendak src="../audio/sp_mr_terendak.mp3"></audio>
 <!-- IMAGE. -->
         <img id="360img" src="../asset/sp_mainroom.jpeg">
 <!-- THUMBNAILS. -->
@@ -30,17 +33,24 @@
         animation__hover="property: scale; startEvents: mouseenter; to: 1.2 1.2 1.2; dur: 200"
         animation__leave="property: scale; startEvents: mouseleave; to: 1 1 1; dur: 200">
       </a-sphere>
+<!-- CONTENTS. -->
+      <a-entity id=audAtt sound="src: #audio_attire; volume: 1"></a-entity>
+      <a-entity id=audDais sound="src: #audio_dais; volume: 1"></a-entity>
+      <a-entity id=audTr sound="src: #audio_terendak; volume: 1"></a-entity>
 <!-- ANNOTATIONS. -->
       <a-sphere position="-3 1.5 0" radius="0.05" color="#2ba4e0"
         portal-label="text: Melanau Wedding Attire; offset: 0 -0.25 0; textScale: 1.2"
+        audio-toggle="target: #audAtt; mode: restart"
         animation__hover="property: scale; startEvents: mouseenter; to: 1.4 1.4 1.4; dur: 50"
         animation__leave="property: scale; startEvents: mouseleave; to: 1 1 1; dur: 50"></a-sphere>
       <a-sphere position="-3 2.5 0.75" radius="0.05" color="#2ba4e0"
         portal-label="text: Gatak the Melanau Wedding Dais; offset: 0 -0.25 0; textScale: 1.2"
+        audio-toggle="target: #audDais; mode: restart"
         animation__hover="property: scale; startEvents: mouseenter; to: 1.4 1.4 1.4; dur: 50"
         animation__leave="property: scale; startEvents: mouseleave; to: 1 1 1; dur: 50"></a-sphere>
       <a-sphere position="-3 2.1 -2.75" radius="0.05" color="#2ba4e0"
         portal-label="text: Terendak; offset: 0 -0.25 0; textScale: 1.2"
+        audio-toggle="target: #audTr; mode: restart"
         animation__hover="property: scale; startEvents: mouseenter; to: 1.4 1.4 1.4; dur: 50"
         animation__leave="property: scale; startEvents: mouseleave; to: 1 1 1; dur: 50"></a-sphere>
 <!-- CAMERA + CURSOR. -->
